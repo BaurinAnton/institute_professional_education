@@ -1,0 +1,49 @@
+
+
+@keyframes itemColor {
+    from { opacity: 0; }
+    to { opacity: 1;  }
+}
+
+.module {
+    display: flex;
+    align-items: baseline;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 17px;
+        width: 100%;
+    }
+    .column:nth-of-type(1) {
+        margin-right: 81px;
+        @media (max-width: 768px) {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+    .column:nth-of-type(2) {
+        ul {
+            width: 353px;
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+            .item {
+                animation: itemColor .3s;
+                margin-bottom: 10px;
+
+                font-size: 16px;
+                font-family: StyreneAWeb-Light;
+                display: flex;
+                line-height: 19px;
+                &:nth-last-of-type(1) {
+                    margin-bottom: 0;
+                }
+                &::before {
+                    color: var(--border-color);
+                    content: "●";
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+}

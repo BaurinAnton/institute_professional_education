@@ -1,0 +1,27 @@
+.container {
+    margin-top: 147px;
+    margin-bottom: 171px;
+    display: flex;
+    justify-content: space-between;
+
+    transition: .3s;
+
+    @media (max-width: 1440px) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 44px;
+        margin-bottom: 47px;
+    }
+
+    .column {
+        transition: .3s;
+
+        @media (max-width: 1440px) {
+            margin-bottom: 23px;
+
+            &:nth-last-of-type(1) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
